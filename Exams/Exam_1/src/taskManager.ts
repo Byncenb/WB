@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskDeadline = document.getElementById('taskDeadline') as HTMLInputElement;
     const taskResponsible = document.getElementById('taskResponsible') as HTMLInputElement;
     const taskLocation = document.getElementById('taskLocation') as HTMLInputElement;
-    // Добавляем события click для кнопок
+    // Добавляем событие click для кнопок
     if (addTaskButton) {
         addTaskButton.addEventListener('click', addTask);
     }

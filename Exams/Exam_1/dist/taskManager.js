@@ -40,10 +40,10 @@ class TaskManager {
     filterTasksByType(tasks, taskType) {
         const filteredTasks = tasks.filter(task => {
             switch (taskType) {
-                case 'deadline': return 'deadline' in task; // Проверяем, есть ли поле deadline
-                case 'responsible': return 'responsiblePerson' in task; // Проверяем, есть ли поле responsiblePerson
-                case 'location': return 'location' in task; // Проверяем, есть ли поле location
-                default: return true; // Если тип не совпадает с известными, просто возвращаем true, чтобы вернуть все задачи
+                case 'deadline': return 'deadline' in task;
+                case 'responsible': return 'responsiblePerson' in task;
+                case 'location': return 'location' in task;
+                default: return true;
             }
         });
         return filteredTasks; // Если ничего не найдено, то filteredTasks будет пустым массивом
@@ -110,11 +110,9 @@ function applyFilter() {
     let filteredTasks = taskManager.getAllTasks();
     if (statusFilter !== 'all') {
         filteredTasks = taskManager.filterTasksByStatus(filteredTasks, statusFilter);
-        console.log('status', filteredTasks);
     }
     if (typeFilter !== 'all') {
         filteredTasks = taskManager.filterTasksByType(filteredTasks, typeFilter);
-        console.log('type', filteredTasks);
     }
     renderTasks(filteredTasks);
 }
@@ -140,7 +138,7 @@ function renderTasks(tasks = taskManager.getAllTasks()) {
         else {
             li.textContent += ` - ${typeMapping.basic}`;
         }
-        // Добавляем значение task.value, если оно существует
+        // Добавляем значение для выбранного типа задачи, если оно существует
         if (task.deadline)
             li.textContent += ` - Значение: ${task.deadline}`;
         else if (task.location)
@@ -167,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskDeadline = document.getElementById('taskDeadline');
     const taskResponsible = document.getElementById('taskResponsible');
     const taskLocation = document.getElementById('taskLocation');
-    // Добавляем события click для кнопок
+    // Добавляем событие click для кнопок
     if (addTaskButton) {
         addTaskButton.addEventListener('click', addTask);
     }
