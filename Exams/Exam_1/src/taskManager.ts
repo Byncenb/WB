@@ -210,25 +210,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const taskDeadline = document.getElementById('taskDeadline') as HTMLInputElement;
     const taskResponsible = document.getElementById('taskResponsible') as HTMLInputElement;
     const taskLocation = document.getElementById('taskLocation') as HTMLInputElement;
+
+    if (!(taskTitle && taskDescription && taskType && taskStatus && addTaskButton && taskDeadline && taskResponsible && taskLocation && addTaskButton && applyFilterButton)) return;
+
     // Добавляем событие click для кнопок
-    if (addTaskButton) {
-        addTaskButton.addEventListener('click', addTask);
-    }
-    if (applyFilterButton) {
-        applyFilterButton.addEventListener('click', applyFilter);
-    }
+    addTaskButton.addEventListener('click', addTask);
+    applyFilterButton.addEventListener('click', applyFilter);
+
     // Проверяем заполненность полей
-    if (taskTitle && taskDescription && taskType && taskStatus && addTaskButton && taskDeadline && taskResponsible && taskLocation) {
-        taskTitle.addEventListener('input', checkFields);
-        taskDescription.addEventListener('input', checkFields);
-        taskType.addEventListener('change', checkFields);
-        taskStatus.addEventListener('change', checkFields);
-        taskDeadline.addEventListener('change', checkFields);
-        taskResponsible.addEventListener('change', checkFields);
-        taskLocation.addEventListener('change', checkFields);
-    }
+    taskTitle.addEventListener('input', checkFields);
+    taskDescription.addEventListener('input', checkFields);
+    taskType.addEventListener('change', checkFields);
+    taskStatus.addEventListener('change', checkFields);
+    taskDeadline.addEventListener('change', checkFields);
+    taskResponsible.addEventListener('change', checkFields);
+    taskLocation.addEventListener('change', checkFields);
+
     // Обрабатываем изменения в типе задачи
-    if (taskType) taskType.addEventListener('change', onChangeTaskType);
+    taskType.addEventListener('change', onChangeTaskType);
 });
 
 // Функция для проверки заполненных полей
