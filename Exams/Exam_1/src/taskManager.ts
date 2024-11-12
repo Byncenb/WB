@@ -150,12 +150,10 @@ function applyFilter() {
 
     if (statusFilter !== 'all') {
         filteredTasks = taskManager.filterTasksByStatus(filteredTasks, statusFilter as TaskStatus);
-        console.log('status', filteredTasks);
     }
 
     if (typeFilter !== 'all') {
         filteredTasks = taskManager.filterTasksByType(filteredTasks, typeFilter as TaskType);
-        console.log('type', filteredTasks);
     }
 
     renderTasks(filteredTasks);
