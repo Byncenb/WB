@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач</title>
+</head>
+<body>
+    <h2>Менеджер задач</h2>
+
+    <!-- Форма для добавления задач -->
+    <div>
+        <label>Название задачи: </label><input type="text" id="taskTitle"><br>
+        <label>Описание задачи: </label><input type="text" id="taskDescription"><br>
+        <label>Тип задачи: </label>
+        <select id="taskType">
+            <option value="basic">Базовая</option>
+            <option value="deadline">С крайним сроком</option>
+            <option value="responsible">С ответственным лицом</option>
+            <option value="location">С местом проведения</option>
+        </select><br>
+        <label>Статус задачи: </label>
+        <select id="taskStatus">
+            <option value="incomplete">Не выполнена</option>
+            <option value="completed">Выполнена</option>
+        </select><br>
+        <label>Дата выполнения: </label><input type="date" id="taskDeadline" disabled><br>
+        <label>Ответственное лицо: </label><input type="text" id="taskResponsible" disabled><br>
+        <label>Место проведения: </label><input type="text" id="taskLocation" disabled><br>
+        <button id="addTask" disabled>Добавить задачу</button>
+    </div>
+
+    <!-- Форма для фильтрации задач -->
+    <div>
+        <h3>Фильтрация задач</h3>
+        <label>Фильтровать по статусу: </label>
+        <select id="statusFilter">
+            <option value="all">Все</option>
+            <option value="completed">Выполненные</option>
+            <option value="incomplete">Не выполненные</option>
+        </select><br>
+        <label>Фильтровать по типу задачи: </label>
+        <select id="typeFilter">
+            <option value="all">Все</option>
+            <option value="basic">Базовые</option>
+            <option value="deadline">С крайним сроком</option>
+            <option value="responsible">С ответственным лицом</option>
+            <option value="location">С местом проведения</option>
+        </select><br>
+        <button id="applyFilter">Применить фильтр</button>
+    </div>
+
+    <h3>Список задач</h3>
+    <ul id="taskList"></ul>
+
+    <script type="module" src="dist/taskManager.js"></script>
+
+</body>
+</html>
