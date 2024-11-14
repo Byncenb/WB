@@ -84,13 +84,20 @@ class TaskManager {
 // Пример использования
 const taskManager = new TaskManager();
 function addTask() {
-    const title = document.getElementById('taskTitle')?.value || '';
-    const description = document.getElementById('taskDescription')?.value || '';
-    const taskType = document.getElementById('taskType')?.value || 'basic';
-    const taskStatus = document.getElementById('taskStatus')?.value || 'incomplete';
-    const deadline = document.getElementById('taskDeadline')?.value || '';
-    const responsiblePerson = document.getElementById('taskResponsible')?.value || '';
-    const location = document.getElementById('taskLocation')?.value || '';
+    const titleElem = document.getElementById('taskTitle');
+    const descriptionElem = document.getElementById('taskDescription');
+    const taskTypeElem = document.getElementById('taskType');
+    const taskStatusElem = document.getElementById('taskStatus');
+    const deadlineElem = document.getElementById('taskDeadline');
+    const responsiblePersonElem = document.getElementById('taskResponsible');
+    const locationElem = document.getElementById('taskLocation');
+    const title = titleElem?.value || '';
+    const description = descriptionElem?.value || '';
+    const taskType = taskTypeElem?.value || 'basic';
+    const taskStatus = taskStatusElem?.value || 'incomplete';
+    const deadline = deadlineElem?.value || '';
+    const responsiblePerson = responsiblePersonElem?.value || '';
+    const location = locationElem?.value || '';
     let additionalFields = {};
     if (taskType === 'deadline' && deadline) {
         additionalFields.deadline = new Date(deadline);
@@ -102,6 +109,13 @@ function addTask() {
         additionalFields.location = location;
     }
     taskManager.addTask(taskStatus, taskType, title, description, additionalFields);
+    titleElem.value = '';
+    descriptionElem.value = '';
+    taskTypeElem.value = 'basic';
+    taskStatusElem.value = '';
+    deadlineElem.value = '';
+    responsiblePersonElem.value = '';
+    locationElem.value = '';
     renderTasks();
 }
 function applyFilter() {

@@ -121,13 +121,21 @@ class TaskManager {
 const taskManager = new TaskManager();
 
 function addTask() {
-    const title = (document.getElementById('taskTitle') as HTMLInputElement)?.value || '';
-    const description = (document.getElementById('taskDescription') as HTMLInputElement)?.value || '';
-    const taskType = (document.getElementById('taskType') as HTMLInputElement)?.value || 'basic';
-    const taskStatus = (document.getElementById('taskStatus') as HTMLInputElement)?.value || 'incomplete';
-    const deadline = (document.getElementById('taskDeadline') as HTMLInputElement)?.value || '';
-    const responsiblePerson = (document.getElementById('taskResponsible') as HTMLInputElement)?.value || '';
-    const location = (document.getElementById('taskLocation') as HTMLInputElement)?.value || '';
+    const titleElem = document.getElementById('taskTitle') as HTMLInputElement;
+    const descriptionElem = document.getElementById('taskDescription') as HTMLInputElement;
+    const taskTypeElem = document.getElementById('taskType') as HTMLInputElement;
+    const taskStatusElem = document.getElementById('taskStatus') as HTMLInputElement;
+    const deadlineElem = document.getElementById('taskDeadline') as HTMLInputElement;
+    const responsiblePersonElem = document.getElementById('taskResponsible') as HTMLInputElement;
+    const locationElem = document.getElementById('taskLocation') as HTMLInputElement;
+
+    const title = titleElem?.value || '';
+    const description = descriptionElem?.value || '';
+    const taskType = taskTypeElem?.value || 'basic';
+    const taskStatus = taskStatusElem?.value || 'incomplete';
+    const deadline = deadlineElem?.value || '';
+    const responsiblePerson = responsiblePersonElem?.value || '';
+    const location = locationElem?.value || '';
 
     let additionalFields: any = {};
     if (taskType === 'deadline' && deadline) {
@@ -139,6 +147,15 @@ function addTask() {
     }
 
     taskManager.addTask(taskStatus as TaskStatus, taskType as TaskType, title, description, additionalFields);
+
+    titleElem.value = '';
+    descriptionElem.value = '';
+    taskTypeElem.value = 'basic';
+    taskStatusElem.value = '';
+    deadlineElem.value = '';
+    responsiblePersonElem.value = '';
+    locationElem.value = '';
+
     renderTasks();
 }
 
