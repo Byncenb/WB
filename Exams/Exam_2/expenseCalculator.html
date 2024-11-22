@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор расходов</title>
+</head>
+<body>
+    <h1>Калькулятор расходов</h1>
+
+    <section id="add-expense">
+        <h2>Добавить расход</h2>
+        <form id="expense-form">
+        <label>
+            Категория:
+            <input type="text" id="category" required />
+        </label>
+        <label>
+            Сумма:
+            <input type="number" id="amount" required />
+        </label>
+        <label>
+            Дата:
+            <input type="date" id="date" required />
+        </label>
+        <button type="submit">Добавить</button>
+        </form>
+    </section>
+
+    <section id="reports">
+        <h2>Отчеты</h2>
+        <button id="show-category-report">Отчет по категориям</button>
+        <button id="show-expense-report">Общий отчет</button>
+        <button id="filter-by-date">Расходы за период</button>
+        <div id="output"></div>
+    </section>
+
+    <script src="dist/expenseCalculator.js" defer></script>
+</body>
+</html>
