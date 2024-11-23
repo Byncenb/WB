@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра с пошаговым боем</title>
+    <style>
+        .unit { margin-bottom: 10px; }
+        button { margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Игра с пошаговым боем</h1>
+    <div id="game">
+        <div id="player-units">
+            <h2>Ваши юниты</h2>
+        </div>
+        <div id="enemy-units">
+            <h2>Юниты врага</h2>
+        </div>
+        <button id="auto-battle-btn" onclick="toggleAutoBattle()">Включить автобой</button>
+        <button onclick="clearLog()">Очистить журнал</button>
+        <div id="log">
+            <h3>Журнал действий</h3>
+        </div>
+    </div>
+    <script type="module" src="./dist/index.js"></script>
+</body>
+</html>
