@@ -1,0 +1,9 @@
+{
+  "width": 12,
+  "height": 8,
+  "items": [
+    { "id": "1", "type": "potion", "rarity": "common", "size": { "width": 1, "height": 1 }, "position": { "x": 0, "y": 0 } },
+    { "id": "2", "type": "equipment", "rarity": "rare", "size": { "width": 2, "height": 2 }, "position": { "x": 2, "y": 0 } },
+    { "id": "3", "type": "weapon", "rarity": "epic", "size": { "width": 3, "height": 1 }, "position": { "x": 5, "y": 2 } }
+  ]
+}
