@@ -1,9 +1,9 @@
 {
-    "width": 12,
-    "height": 8,
-    "items": [
-      { "id": "1", "type": "weapon", "rarity": "common", "size": { "width": 1, "height": 2 }, "position": { "x": 0, "y": 0 } },
-      { "id": "2", "type": "potion", "rarity": "epic", "size": { "width": 2, "height": 1 }, "position": { "x": 1, "y": 1 } },
-      { "id": "3", "type": "equipment", "rarity": "rare", "size": { "width": 2, "height": 2 }, "position": { "x": 3, "y": 3 } }
-    ]
+  "width": 12,
+  "height": 8,
+  "items": [
+    { "id": "1", "type": "weapon", "rarity": "common", "size": { "width": 1, "height": 2 }, "position": { "x": 0, "y": 0 } },
+    { "id": "2", "type": "potion", "rarity": "epic", "size": { "width": 2, "height": 1 }, "position": { "x": 1, "y": 1 } },
+    { "id": "3", "type": "equipment", "rarity": "rare", "size": { "width": 2, "height": 2 }, "position": { "x": 3, "y": 3 } }
+  ]
   }
