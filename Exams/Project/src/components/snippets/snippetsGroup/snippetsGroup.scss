@@ -1,0 +1,33 @@
+.snippets {
+    &__small-snippets-group-wrapper {
+        background: linear-gradient(to bottom right, #00FBFF 0%, #0051FF 50%) bottom right / 50% 50% no-repeat,
+                    linear-gradient(to bottom left, #00FBFF 0%, #0051FF 50%) bottom left / 50% 50% no-repeat,
+                    linear-gradient(to top left, #00FBFF 0%, #0051FF 50%) top left / 50% 50% no-repeat,
+                    linear-gradient(to top right, #00FBFF 0%, #0051FF 50%) top right / 50% 50% no-repeat,
+                    #090909;
+        margin: 0 -4px;
+        border-radius: var(--border12);
+        padding: 32px 4px;
+    }
+
+    &__snippets-group-list {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    &__small-snippets-group-list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        row-gap: 29px;
+    }
+
+    &__snippets-group-title {
+        margin-bottom: -90px;
+        position: relative;
+        z-index: 1;
+    }
+}

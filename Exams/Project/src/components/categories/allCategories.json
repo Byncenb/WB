@@ -1,0 +1,69 @@
+{
+    "items": [
+        {
+            "id": 1,
+            "name": "Помощь психолога",
+            "src": "/category/1.png"
+        },
+        {
+            "id": 2,
+            "name": "Гаджеты",
+            "src": "/category/2.png"
+        },
+        {
+            "id": 3,
+            "name": "Предметы искусства",
+            "src": "/category/3.png"
+        },
+        {
+            "id": 4,
+            "name": "Товары для дома",
+            "src": "/category/4.png"
+        },
+        {
+            "id": 5,
+            "name": "Таланты",
+            "src": "/category/5.png"
+        },
+        {
+            "id": 6,
+            "name": "Магия",
+            "src": "/category/6.png"
+        },
+        {
+            "id": 7,
+            "name": "Релакс",
+            "src": "/category/7.png"
+        },
+        {
+            "id": 8,
+            "name": "Развлече-ния",
+            "src": "/category/8.png"
+        },
+        {
+            "id": 9,
+            "name": "Сокровища",
+            "src": "/category/9.png"
+        },
+        {
+            "id": 10,
+            "name": "Недвижимость",
+            "src": "/category/10.png"
+        },
+        {
+            "id": 11,
+            "name": "Красота и здоровье",
+            "src": "/category/11.png"
+        },
+        {
+            "id": 12,
+            "name": "Могущество",
+            "src": "/category/12.png"
+        },
+        {
+            "id": 13,
+            "name": "Стиль",
+            "src": "/category/13.png"
+        }
+    ]
+}

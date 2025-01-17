@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+
+:root {
+    /* colors */
+    --Shop-Black: #090909;
+    --black: #000;
+    --Shop-Gray: #BCCDD1;
+    --Shop-White: #FFF;
+
+    /* fonts */
+    --Shop-text: Inter;
+    --Shop-title: Rubik Beastly;
+
+    /* borders */
+    --border16: 16px;
+    --border12: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-family: var(--Shop-text);
+    font-size: 15px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    font-family: var(--Shop-text);
+    font-size: 15px;
+    font-weight: 550;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--Shop-text);
+    font-weight: 600;
+}
+
+.hide {
+    display: none;
+}

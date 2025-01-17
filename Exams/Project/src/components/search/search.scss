@@ -1,0 +1,23 @@
+.header {
+    &__search {
+        position: relative;
+
+        &-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        &-input {
+            width: 1016px;
+            padding: 21px 12px 23px 52px;
+            border-radius: 0 0 16px 16px;
+            background: #F2F7F7;
+            border: none;
+            outline: none;
+            font-size: 22px;
+            font-weight: 412;
+        }
+    }
+}
