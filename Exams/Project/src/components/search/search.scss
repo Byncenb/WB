@@ -53,9 +53,15 @@
 
             &-item {
                 padding: 16px 8px 20px;
-                font-size: 22px;
-                font-weight: 412;
                 cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-text {
+                    font-size: 22px;
+                    font-weight: 412;
+                }
             }
 
             &-item:not(:last-of-type) {

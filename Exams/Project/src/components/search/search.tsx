@@ -45,10 +45,16 @@ function Search() {
                         <ul className="header__search-suggestions-list">
                             {filteredSuggestions.length > 0 ? (
                                 filteredSuggestions.map((suggestion, index) => (
-                                    <li className="header__search-suggestions-item" key={index}>{highlightMatch(suggestion, searchTerm)}</li>
+                                    <li className="header__search-suggestions-item" key={index}>
+                                        <p className="header__search-suggestions-item-text">{highlightMatch(suggestion, searchTerm)}</p>
+                                        <img src="/header/icons/suggestions/cross.svg" alt="" className="header__search-suggestions-cross" />
+                                    </li>
                                 ))
                             ) : (
-                                <li className="header__search-suggestions-item">{searchTerm}</li>
+                                <li className="header__search-suggestions-item">
+                                    <p className="header__search-suggestions-item-text">{searchTerm}</p>
+                                    <img src="/header/icons/suggestions/cross.svg" alt="" className="header__search-suggestions-cross" />
+                                </li>
                             )}
                         </ul>
                         <ul className="header__search-suggestions-list-categories">
