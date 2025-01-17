@@ -9,7 +9,9 @@ function Content() {
     return (
         <div className="content">
             <MainBanner />
-            <Categories />
+            <ul className="categories">
+                <Categories />
+            </ul>
             <Snippets />
             <Footer />
         </div>

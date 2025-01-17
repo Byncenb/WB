@@ -1,23 +1,80 @@
 .header {
     &__search {
         position: relative;
+        z-index: 1;
 
-        &-icon {
-            position: absolute;
-            left: 12px;
-            top: 50%;
-            transform: translate(0, -50%);
+        &-input-wrapper {
+            position: relative;
+            z-index: 1;
+
+            .header__search-icon {
+                position: absolute;
+                left: 12px;
+                top: 18px;
+            }
+
+            .header__search-input {
+                width: 1016px;
+                padding: 21px 12px 23px 52px;
+                border-radius: 0 0 16px 16px;
+                background: #F2F7F7;
+                border: none;
+                outline: none;
+                font-size: 22px;
+                font-weight: 412;
+            }
         }
 
-        &-input {
-            width: 1016px;
-            padding: 21px 12px 23px 52px;
-            border-radius: 0 0 16px 16px;
-            background: #F2F7F7;
-            border: none;
-            outline: none;
-            font-size: 22px;
-            font-weight: 412;
+        &-suggestions {
+            position: absolute;
+            background: var(--Shop-White);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: -69px -8px 0;
+            padding: 69px 8px 16px;
+            border-radius: 0px 0px 16px 16px;
+
+            &-list {
+                margin-top: 16px;
+
+                &-categories {
+                    display: flex;
+                    gap: 6px;
+                    overflow-x: auto;
+                    padding: 0 8px;
+                }
+    
+                &-categories::-webkit-scrollbar {
+                    display: none;
+                }
+            }
+
+            &-item {
+                padding: 16px 8px 20px;
+                font-size: 22px;
+                font-weight: 412;
+                cursor: pointer;
+            }
+
+            &-item:not(:last-of-type) {
+                border-bottom: 1px solid var(--Shop-Light-gray);
+            }
         }
     }
+}
+
+.overflow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+}
+
+.highlight {
+    color: var(--Shop-Blue)
 }

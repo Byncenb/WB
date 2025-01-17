@@ -1,20 +1,25 @@
-import { getImages } from "./getImages"
+import { getCategory } from "./getCategory"
 import type { DataCategoryImages } from "../../types/types"
 import Category from "./category/category";
 
 import './categories.scss'
 
-function Categories() {
-    const data: DataCategoryImages = getImages();
+function Categories({ searchTerm = '' }: { searchTerm?: string }) {
+    const data: DataCategoryImages = getCategory();
+
+    // Фильтрация категорий по searchTerm
+    const filteredCategories = data.images.filter(category =>
+        category.name.toLowerCase().startsWith(searchTerm.toLowerCase())
+    );
 
     return (
-        <ul className="categories">
+        <>
             {
-                data.images.map(element => (
-                    <Category key={element.id} category={element}/>
+                filteredCategories.map(element => (
+                    <Category key={element.id} category={element} searchTerm={searchTerm} />
                 ))
             }
-        </ul>
-    )
+        </>
+    );
 }
 export default Categories
