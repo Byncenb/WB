@@ -1,20 +1,18 @@
 import MainBanner from "../mainBanner/mainBanner"
 import Categories from "../categories/categories"
 import Snippets from "../snippets/snippets"
-import Footer from "../footer/footer"
 
-import './content.scss'
+import './home.scss'
 
-function Content() {
+function Home() {
     return (
-        <div className="content">
+        <div className="home">
             <MainBanner />
             <ul className="categories">
                 <Categories />
             </ul>
             <Snippets />
-            <Footer />
         </div>
     )
 }
-export default Content
+export default Home

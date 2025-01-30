@@ -5,11 +5,20 @@ import favoritesIcon from "/header/icons/favorites.svg"
 import profileIcon from "/header/icons/profile.svg"
 import "./header.scss"
 
-function Header() {
+type HeaderProps = {
+  setCurrentPage: (page: 'home' | 'catalog') => void;
+  setCatalogTitle: (title: string) => void;
+  setCurrenCatalogId: (id: number) => void;
+}
+
+function Header({ setCurrentPage, setCatalogTitle, setCurrenCatalogId }: HeaderProps) {
   return (
     <div className="header">
-      <h4 className="header__title">магаз</h4>
-      <Search/>
+      <h4 className="header__title" onClick={() => setCurrentPage('home')}>магаз</h4>
+      <Search 
+      setCurrentPage={setCurrentPage}
+      setCatalogTitle={setCatalogTitle}
+      setCurrenCatalogId={setCurrenCatalogId}/>
       <div className="header__icons">
         <img src={cartIcon} alt="Корзина" className="header__icon-cart" />
         <img src={deliveryIcon} alt="Доставка" className="header__icon-delivery" />

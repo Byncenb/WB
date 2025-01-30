@@ -1,0 +1,19 @@
+.catalog {
+    &__info {
+        display: flex;
+        gap: 10px;
+        padding-left: 16px;
+        align-items: end;
+        margin-bottom: 28px;
+    }
+
+    &__title {
+        font-size: 44px;
+        line-height: 100%;
+    }
+
+    &__products-value {
+        font-size: 22px;
+        color: var(--Shop-Gray);
+    }
+}

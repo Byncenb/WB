@@ -13,7 +13,7 @@ type SnippetImagesProps = {
 function SnippetImages({ image, type, name, bg }: SnippetImagesProps) {
     const imageType = type ? allImagesTypes[type as keyof typeof allImagesTypes] : undefined;
     const styles = {
-        backgroundColor: colors[bg as keyof typeof colors] || '#fff',
+        backgroundColor: colors[bg as keyof typeof colors] || colors.lightGray,
     }
 
     if (!imageType) {

@@ -19,6 +19,7 @@ export type SnippetInfo = {
     folowers: number;
     type?: string;
     bg?: string;
+    categoryId: Number[];
 }
 
 export type DataSnippetsInfo = {

@@ -5,13 +5,13 @@ import './snippet.scss'
 
 type SnippetProps = {
     snippet: SnippetInfo,
-    groupType: number,
+    groupType?: number,
 }
 
 function Snippet({snippet, groupType}: SnippetProps) {
     if (groupType === 1) {
         return (
-            <li className="snippets__snippet">
+            <div className="snippets__snippet">
                 <div className="snippets__snippet-imgs-wrap">
                     <SnippetImages image={snippet.src} name={snippet.name} type={snippet?.type} bg={snippet?.bg} />
                 </div>
@@ -28,7 +28,7 @@ function Snippet({snippet, groupType}: SnippetProps) {
                             <div className="snippets__snippet-prices">
                                 <h4 className="snippets__snippet-price">{snippet.price} ₽</h4>
                                 { snippet.oldPrice && (
-                                    <p className="snippets__snippet-old-price">{snippet.oldPrice} ₽</p>
+                                    <s className="snippets__snippet-old-price">{snippet.oldPrice} ₽</s>
                                 )}
                             </div>
                             <div className="snippets__user-rating">
@@ -45,11 +45,11 @@ function Snippet({snippet, groupType}: SnippetProps) {
                         <a className="snippets__buy-btn">В корзину</a>
                     </div>
                 </div>
-            </li>
+            </div>
         )
     } else {
         return (
-            <li className="snippets__small-snippet">
+            <div className="snippets__small-snippet">
                 <SnippetImages image={snippet.src} name={snippet.name} bg={snippet?.bg} groupType={groupType}/>
                 <img src="/snippet/icon/lighter-heart.svg" alt="" className="snippets__add-fav" />
                 <div className="snippets__snippet-bottom-info">
@@ -58,7 +58,7 @@ function Snippet({snippet, groupType}: SnippetProps) {
                             <div className="snippets__snippet-prices">
                                 <h4 className="snippets__snippet-price">{snippet.price} ₽</h4>
                                 { snippet.oldPrice && (
-                                    <p className="snippets__snippet-old-price">{snippet.oldPrice} ₽</p>
+                                    <s className="snippets__snippet-old-price">{snippet.oldPrice} ₽</s>
                                 )}
                             </div>
                             <div className="snippets__user-rating">
@@ -76,7 +76,7 @@ function Snippet({snippet, groupType}: SnippetProps) {
                         <a className="snippets__buy-btn">В корзину</a>
                     </div>
                 </div>
-            </li>
+            </div>
         )
     }
 }

@@ -1,6 +1,23 @@
-.snippets {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    padding: 60px 0 100px;
+.home {
+    .snippets {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        padding: 60px 0 100px;
+    }
+}
+
+.catalog {
+    .snippets {
+        padding: 0 4px 48px;
+        row-gap: 29px;
+        flex-direction: row;
+        gap: 4px;
+        row-gap: 29px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin: 0 auto;
+    }
 }

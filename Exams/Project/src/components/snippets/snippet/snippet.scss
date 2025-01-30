@@ -153,3 +153,23 @@
         }
     }
 }
+
+.catalog {
+    .snippets {
+        &__small-snippet {
+            color: var(--Shop-Black);
+        }
+
+        &__snippet-old-price {
+            color: var(--Shop-Gray);
+        }
+
+        &__snippet-rating-star {
+            filter: brightness(0);
+        }
+
+        &__snippet-folowers-heart {
+            filter: brightness(0);
+        }
+    }
+}

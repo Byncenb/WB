@@ -7,8 +7,13 @@ import { getFilteredSuggestions } from './searchSuggestions/getFilteredSuggestio
 import Categories from '../categories/categories';
 import { highlightMatch } from './searchSuggestions/highlightMatch';
 
+type SearchProps = {
+    setCurrentPage: (page: 'home' | 'catalog') => void;
+    setCatalogTitle: (title: string) => void;
+    setCurrenCatalogId: (id: number) => void;
+}
 
-function Search() {
+function Search({ setCurrentPage, setCatalogTitle, setCurrenCatalogId }: SearchProps) {
     const [isOpen, setIsOpen] = useState(false); // Состояние для управления видимостью подсказок
     const [searchTerm, setSearchTerm] = useState(''); // Состояние для хранения текста поиска
 
@@ -20,9 +25,25 @@ function Search() {
         setSearchTerm(event.target.value); // Обновляем текст поиска
     };
 
-    const handleBlur = () => {
+    const handleOverflowClick = () => {
+        setIsOpen(false); // Закрываем подсказки при клике на overflow
+    };
+
+    const handleSuggestionClick = (suggestionName: string) => {
+        setCatalogTitle(suggestionName); // Устанавливаем название каталога
+        setCurrenCatalogId(0); // Устанавливаем id категории, чтобы различать поисковую выдачу от выдачи по категории
+        setCurrentPage('catalog'); // Переход на страницу Catalog
         setIsOpen(false); // Закрываем подсказки при потере фокуса
     };
+
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') { // Если нажат Enter, выполняем переход на страницу каталога
+            setCatalogTitle(searchTerm); // Устанавливаем название каталога
+            setCurrenCatalogId(0); // Устанавливаем id категории, чтобы различать поисковую выдачу от выдачи по категории
+            setCurrentPage('catalog'); // Переход на страницу Catalog
+            setIsOpen(false); // Закрываем подсказки при потере фокуса
+        }
+      };
 
     const filteredSuggestions = getFilteredSuggestions(searchTerm);
 
@@ -36,7 +57,7 @@ function Search() {
                     placeholder="Поиск товаров"
                     onClick={handleInputClick}
                     onChange={handleInputChange}
-                    onBlur={handleBlur}
+                    onKeyDown={handleKeyDown}
                 />
             </div>
             {isOpen && (
@@ -45,23 +66,28 @@ function Search() {
                         <ul className="header__search-suggestions-list">
                             {filteredSuggestions.length > 0 ? (
                                 filteredSuggestions.map((suggestion, index) => (
-                                    <li className="header__search-suggestions-item" key={index}>
+                                    <li className="header__search-suggestions-item" onClick={() =>handleSuggestionClick(suggestion)} key={index}>
                                         <p className="header__search-suggestions-item-text">{highlightMatch(suggestion, searchTerm)}</p>
                                         <img src="/header/icons/suggestions/cross.svg" alt="" className="header__search-suggestions-cross" />
                                     </li>
                                 ))
                             ) : (
-                                <li className="header__search-suggestions-item">
+                                <li className="header__search-suggestions-item" onClick={() => handleSuggestionClick(searchTerm)}>
                                     <p className="header__search-suggestions-item-text">{searchTerm}</p>
                                     <img src="/header/icons/suggestions/cross.svg" alt="" className="header__search-suggestions-cross" />
                                 </li>
                             )}
                         </ul>
                         <ul className="header__search-suggestions-list-categories">
-                            <Categories searchTerm={searchTerm} />
+                            <Categories
+                            searchTerm={searchTerm}
+                            setCurrentPage={setCurrentPage}
+                            setCatalogTitle={setCatalogTitle}
+                            setIsOpen={setIsOpen}
+                            setCurrenCatalogId={setCurrenCatalogId}/>
                         </ul>
                     </div>
-                    <div className="overflow"></div>
+                    <div className="overflow" onClick={handleOverflowClick}></div>
                 </>
             )}
         </div>

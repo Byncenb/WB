@@ -13,6 +13,7 @@ export const getSnippets = (): DataSnippetsInfo => {
         folowers: item.folowers,
         type: item?.type,
         bg: item?.bg || undefined,
+        categoryId: item.categoryId,
     }));
     return { snippets: items };
 }   
