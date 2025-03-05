@@ -4,12 +4,18 @@ import Snippets from "../snippets/snippets"
 
 import './home.scss'
 
-function Home() {
+type HomeProps = {
+    setCurrentPage: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
+    setCatalogTitle: (title: string) => void;
+    setCurrenCatalogId: (id: number) => void;
+}
+
+function Home({ setCurrentPage, setCatalogTitle, setCurrenCatalogId }: HomeProps) {
     return (
         <div className="home">
             <MainBanner />
             <ul className="categories">
-                <Categories />
+                <Categories setCurrentPage={setCurrentPage} setCatalogTitle={setCatalogTitle} setCurrenCatalogId={setCurrenCatalogId}/>
             </ul>
             <Snippets />
         </div>

@@ -20,6 +20,8 @@ function Catalog({ title, categoryId }: CatalogProps) {
         filteredSnippets = snippets.filter(snippet => snippet.name.toLowerCase().includes(title.toLowerCase()));
     }
 
+    scrollTo(0, 0);
+
     return (
         <div className="catalog">
             <div className="catalog__info">

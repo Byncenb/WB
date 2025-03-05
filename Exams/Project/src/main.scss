@@ -9,6 +9,10 @@
     --Shop-White: #FFF;
     --Shop-Light-gray: #E1ECED;
     --Shop-Blue: #2E09E5;
+    --Shop-Red: #F94233;
+    --Shop-Fire: linear-gradient(99deg, #FA0 -8.11%, #F94233 86.42%);
+    --Shop-Yellow: #FA0;
+    --Shop-Almost-white: #F2F7F7;
 
     /* fonts */
     --Shop-text: Inter;
@@ -17,6 +21,8 @@
     /* borders */
     --border16: 16px;
     --border12: 12px;
+    --border8: 8px;
+    --border4: 4px
 }
 
 * {
@@ -40,11 +46,14 @@ p, s {
     font-family: var(--Shop-text);
     font-size: 15px;
     font-weight: 550;
+    line-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--Shop-text);
     font-weight: 600;
+    line-height: 100%;
+
 }
 
 .hide {

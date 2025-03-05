@@ -1,0 +1,104 @@
+.delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 40px 16px 48px;
+
+    &__title {
+        font-size: 44px;
+    }
+
+    &__snippets-images{
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+    }
+
+    &__image-wrap {
+        width: 103px;
+        height: 130px;
+        position: relative;
+    }
+
+    &__snippet-img {
+        border-radius: var(--border8);
+        width: inherit;
+        height: inherit;
+    }
+
+    &__order {
+        &-ready {
+            border-radius: var(--border12);
+            background: var(--Shop-Fire);
+            color: var(--Shop-White);
+            width: max-content;
+            padding: 4px 4px 10px;
+            
+            .delivery__order {
+                &-top-info {
+                    display: flex;
+                    gap: 8px;
+                    margin-bottom: 8px;
+                }
+
+                &-id {
+                    font-size: 32px;
+                }
+
+                &-text {
+                    background: var(--Shop-Yellow);
+                    padding: 4px 6px 7px;
+                    border-radius: var(--border4);
+                    display: block;
+                    align-self: center;
+                }
+
+                &-bottom-info {
+                    font-size: 22px;
+                }
+
+                &-info {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        &-awaiting {
+            .delivery__order {
+                &-bottom-info {
+                    margin: 7px 0;
+                    font-size: 22px;
+                }
+
+                &-text {
+                    border-radius: var(--border4);
+                    background: var(--Shop-Gray);
+                    color: var(--Shop-White);
+                    padding: 4px 6px 6px;
+                    align-self: center;
+                    display: block;
+                    width: max-content;
+                }
+            }
+        }
+
+        &-recieved {
+            .delivery__order {
+                &-bottom-info {
+                    margin: 7px 0;
+                    font-size: 22px;
+                }
+
+                &-text {
+                    border-radius: var(--border4);
+                    background: var(--Shop-Almost-white);
+                    color: var(--Shop-Gray);
+                    padding: 4px 6px 6px;
+                    align-self: center;
+                    display: block;
+                    width: max-content;
+                }
+            }
+        }
+    }
+}

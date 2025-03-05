@@ -1,0 +1,10 @@
+.delivery {
+    &__order-rate {
+        position: absolute;
+        display: flex;
+        bottom: 4px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+}

@@ -6,7 +6,7 @@ import './categories.scss'
 
 type CategoriesProps = {
     searchTerm?: string,
-    setCurrentPage?: (page: 'home' | 'catalog') => void;
+    setCurrentPage?: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
     setCatalogTitle?: (title: string) => void;
     setIsOpen?: (isOpen: boolean) => void;
     setCurrenCatalogId?: (id: number) => void;

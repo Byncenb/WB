@@ -1,0 +1,53 @@
+{
+    "orders": [
+        {
+            "id": 1,
+            "products": [
+                { "id": 1, "rate": 5 },
+                { "id": 22, "rate": 3 }
+            ],
+            "state": "recieved",
+            "orderDate": "21 ноября",
+            "receiptDate": "22 ноября",
+            "buildDate": "",
+            "totalSum": 100
+        },
+        {
+            "id": 2,
+            "products": [
+                { "id": 2 },
+                { "id": 3 },
+                { "id": 4 },
+                { "id": 5 },
+                { "id": 6 },
+                { "id": 7 },
+                { "id": 8 },
+                { "id": 9 },
+                { "id": 10 },
+                { "id": 11 },
+                { "id": 12 },
+                { "id": 13 },
+                { "id": 14 },
+                { "id": 15 }
+            ],
+            "state": "awaiting",
+            "orderDate": "22 ноября",
+            "receiptDate": "",
+            "buildDate": "1 декабря",
+            "totalSum": 10000
+        },
+        {
+            "id": 3,
+            "products": [
+                { "id": 16 },
+                { "id": 17 },
+                { "id": 18 }
+            ],
+            "state": "ready",
+            "orderDate": "27 ноября",
+            "receiptDate": "",
+            "buildDate": "",
+            "totalSum": 1000
+        }
+    ]
+}

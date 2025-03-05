@@ -1,0 +1,82 @@
+.profile {
+    padding: 40px 16px 48px;
+
+    &__profile-info {
+        width: 446px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 40px;
+
+        &-title {
+            margin-bottom: 12px;
+            font-size: 44px;
+        }
+    }
+
+    &__input {
+        outline: none;
+        font-size: 22px;
+        color: var(--Shop-Black);
+        font-weight: 412;
+        border: none;
+        border-bottom: 0.7px solid var(--Shop-Gray);
+        padding-bottom: 7px;
+        width: 100%;
+
+        &-card-date {
+            width: 215px;
+        }
+
+        &-card-img {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &__card-info {
+        width: 446px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &-title-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        &-title {
+            font-size: 44px;
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        &-btn {
+            border-radius: var(--border12);
+            background: var(--Shop-Gray);
+            padding: 14px 24px 16px;
+            display: inline-block;
+            color: var(--Shop-White);
+            font-size: 22px;
+            text-align: center;
+            width: 152px;
+            pointer-events: none;
+
+            &_active {
+                background: var(--Shop-Red);
+                pointer-events: auto;
+            }
+        }
+    }
+
+    &__input-card-cvc-wrapper {
+        width: 215px;
+        position: relative;
+    }
+}

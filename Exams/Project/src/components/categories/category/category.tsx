@@ -6,23 +6,19 @@ import './category.scss'
 type CategoryProps = {
     category: CategoryImage;
     searchTerm?: string;
-    setCurrentPage?: (page: 'home' | 'catalog') => void;
+    setCurrentPage?: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
     setCatalogTitle?: (title: string) => void;
     setIsOpen?: (isOpen: boolean) => void;
     setCurrenCatalogId?: (id: number) => void;
 }
 
 function Category({ category, searchTerm, setCurrentPage, setCatalogTitle, setIsOpen, setCurrenCatalogId }: CategoryProps) {
-    let handleSuggestionClick: any;
-
-    if (setCurrentPage && setCatalogTitle && setIsOpen && setCurrenCatalogId) {
-        handleSuggestionClick = (suggestionName: string, categoryId: number) => {
-            setCatalogTitle(suggestionName); // Устанавливаем название каталога
-            setCurrenCatalogId(categoryId); // Устанавливаем id категории для каталожной выдачи
-            setCurrentPage('catalog'); // Переход на страницу Catalog
-            setIsOpen(false); // Закрываем подсказки при потере фокуса
-        };
-    }
+    const handleSuggestionClick = (suggestionName: string, categoryId: number) => {
+        setCatalogTitle && setCatalogTitle(suggestionName); // Устанавливаем название каталога
+        setCurrenCatalogId && setCurrenCatalogId(categoryId); // Устанавливаем id категории для каталожной выдачи
+        setCurrentPage && setCurrentPage('catalog'); // Переход на страницу Catalog
+        setIsOpen && setIsOpen(false); // Закрываем подсказки при потере фокуса
+    };
 
     return (
         <li className="categories__item" onClick={() => handleSuggestionClick(category.name, category.id)}>

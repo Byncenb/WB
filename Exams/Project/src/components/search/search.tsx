@@ -8,7 +8,7 @@ import Categories from '../categories/categories';
 import { highlightMatch } from './searchSuggestions/highlightMatch';
 
 type SearchProps = {
-    setCurrentPage: (page: 'home' | 'catalog') => void;
+    setCurrentPage: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
     setCatalogTitle: (title: string) => void;
     setCurrenCatalogId: (id: number) => void;
 }

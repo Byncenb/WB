@@ -19,7 +19,7 @@ export type SnippetInfo = {
     folowers: number;
     type?: string;
     bg?: string;
-    categoryId: Number[];
+    categoryId: number[];
 }
 
 export type DataSnippetsInfo = {
@@ -27,3 +27,22 @@ export type DataSnippetsInfo = {
 }
 
 export type BackgroundColor = 'orange' | 'gray' | 'blue' | 'red';
+
+export type OrderInfo = {
+    id: number;
+    products: OrderProduct[];
+    state: string;
+    orderDate: string;
+    receiptDate: string;
+    buildDate: string;
+    totalSum: number;
+}
+
+type OrderProduct = {
+    id: number;
+    rate?: number;
+}
+
+export type DataOrdersInfo = {
+    orders: OrderInfo[];
+}
