@@ -8,6 +8,7 @@ import ProductTable from "./productTable";
 import SimilarProducts from "../similarProducts/similarProducts";
 
 import { useEffect, useState } from "react";
+import { useCart } from "../../hooks/useCart";
 
 type ProductProps = {
     product: SnippetInfo;
@@ -16,6 +17,13 @@ type ProductProps = {
 
 function Product({product, setCurrentSnippet}: ProductProps) {
     const [isOptionsHide, setOptionsHide] = useState(true);
+
+    const { addToCart } = useCart();
+
+    const handleAddToCart = (e: React.MouseEvent<HTMLElement>) => {
+        e.stopPropagation();
+        addToCart(product);
+    };
 
     useEffect(() => {
         window.scrollTo({
@@ -53,7 +61,7 @@ function Product({product, setCurrentSnippet}: ProductProps) {
                             <p className="product__price-currency">₽</p>
                         </div>
                         <div className="product__buttons">
-                            <a href="" className="product__buy-btn">В корзину</a>
+                            <a className="product__buy-btn" onClick={handleAddToCart}>В корзину</a>
                             <img src="/product/emptyHeart.svg" alt="" className="product__add-fav" />
                         </div>
                         <ProductTable product={product}/>

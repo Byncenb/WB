@@ -21,6 +21,7 @@ export const getSnippets = (): DataSnippetsInfo => {
         details: item.details,
         temperature: item.temperature,
         productionCountry: item.productionCountry,
+        quantity: 0,
     }));
     return { snippets: items };
 }   

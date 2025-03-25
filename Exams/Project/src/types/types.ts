@@ -27,6 +27,7 @@ export type SnippetInfo = {
     details?: string;
     temperature?: string;
     productionCountry?: string;
+    quantity?: number;
 }
 
 export type DataSnippetsInfo = {

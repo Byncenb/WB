@@ -1,3 +1,4 @@
+import { useCart } from "../../../hooks/useCart";
 import { PageName, SnippetInfo } from "../../../types/types"
 import Rating from "../../rating/Rating";
 import SnippetImages from "../snippetImages/snippetImages"
@@ -17,6 +18,13 @@ function Snippet({snippet, groupType, setCurrentPage, setCurrentSnippet, wrapCla
         setCurrentPage?.('product');
         setCurrentSnippet(snippet);
     }
+
+    const { addToCart } = useCart();
+
+    const handleAddToCart = (e: React.MouseEvent<HTMLElement>) => {
+        e.stopPropagation();
+        addToCart(snippet);
+    };
 
     if (groupType === 1) {
         return (
@@ -42,7 +50,7 @@ function Snippet({snippet, groupType, setCurrentPage, setCurrentSnippet, wrapCla
                             </div>
                             <Rating rating={snippet.rating} folowers={snippet.folowers}  />
                         </div>
-                        <a className={`${wrapClassName}__buy-btn`}>В корзину</a>
+                        <a className={`${wrapClassName}__buy-btn`} onClick={handleAddToCart}>В корзину</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +81,7 @@ function Snippet({snippet, groupType, setCurrentPage, setCurrentSnippet, wrapCla
                             </div>
                         </div>
                         <p className={`${wrapClassName}__snippet-description`}>{snippet.name}</p>
-                        <a className={`${wrapClassName}__buy-btn`}>В корзину</a>
+                        <a className={`${wrapClassName}__buy-btn`} onClick={handleAddToCart}>В корзину</a>
                     </div>
                 </div>
             </div>
