@@ -1,4 +1,4 @@
-import { SnippetInfo } from "../../../types/types"
+import { PageName, SnippetInfo } from "../../../types/types"
 
 import Snippet from "../snippet/snippet"
 
@@ -7,10 +7,12 @@ import './snippetsGroup.scss'
 type SnippetsGroupProps = {
     snippets: SnippetInfo[],
     title?: string,
-    groupType: number
+    groupType: number,
+    setCurrentPage: (page: PageName) => void;
+    setCurrentSnippet: (snippet: SnippetInfo) => void;
 }
 
-function SnippetsGroup({ snippets, title, groupType }: SnippetsGroupProps) {
+function SnippetsGroup({ snippets, title, groupType, setCurrentPage, setCurrentSnippet }: SnippetsGroupProps) {
     const className = groupType === 1 ? 'snippets__snippets-group-list' : 'snippets__small-snippets-group-list';
     const classNameWrapper = groupType === 1 ? 'snippets__snippets-group-wrapper' : 'snippets__small-snippets-group-wrapper';
     return (
@@ -20,7 +22,7 @@ function SnippetsGroup({ snippets, title, groupType }: SnippetsGroupProps) {
                 {
                     <ul className={className}>
                         {snippets.map((element: SnippetInfo) => (
-                            <Snippet key={element.id} snippet={element} groupType={groupType} />
+                            <Snippet setCurrentPage={setCurrentPage} setCurrentSnippet={setCurrentSnippet} key={element.id} snippet={element} groupType={groupType} />
                         ))}
                     </ul>
                 }

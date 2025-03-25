@@ -3,10 +3,13 @@ import cartIcon from "/header/icons/cart.svg"
 import deliveryIcon from "/header/icons/delivery.svg"
 import favoritesIcon from "/header/icons/favorites.svg"
 import profileIcon from "/header/icons/profile.svg"
+
 import "./header.scss"
 
+import { PageName } from "../../types/types"
+
 type HeaderProps = {
-  setCurrentPage: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
+  setCurrentPage: (page: PageName) => void;
   setCatalogTitle: (title: string) => void;
   setCurrenCatalogId: (id: number) => void;
 }

@@ -1,0 +1,14 @@
+.similar-products {
+    &__wrap {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+        padding: 0 4px 40px;
+    }
+
+    &__title {
+        position: relative;
+        bottom: -33px;
+        z-index: 1;
+    }
+}

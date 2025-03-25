@@ -1,4 +1,4 @@
-.snippets {
+.snippets, .similar-products {
     &__snippet-imgs-wrap {
         margin-bottom: 4px;
         display: flex;
@@ -90,7 +90,7 @@
 
     &__buy-btn {
         display: block;
-        padding: 14px 24px;
+        padding: 14px 24px 16px;
         background: #F94233;
         color: var(--Shop-White);
         font-size: 22px;
@@ -99,12 +99,12 @@
     }
 }
 
-.snippets__small-snippet {
+.snippets__small-snippet, .similar-products__small-snippet {
     width: 283px;
     color: var(--Shop-White);
     position: relative;
 
-    .snippets {
+    .snippets, .similar-products {
         &__add-fav {
             position: absolute;
             top: 5px;
@@ -150,13 +150,12 @@
         &__buy-btn {
             margin-top: 12px;
             display: inline-block;
-            padding: 14px 24px 16px;
         }
     }
 }
 
-.catalog {
-    .snippets {
+.catalog, .similar-products {
+    .snippets, .similar-products {
         &__small-snippet {
             color: var(--Shop-Black);
         }

@@ -1,7 +1,7 @@
 import Snippet from "../snippets/snippet/snippet";
 import NotFound from "../notFound/notFound";
 
-import { SnippetInfo } from "../../types/types"
+import { PageName, SnippetInfo } from "../../types/types"
 import { getSnippets } from "../snippets/snippet/getSnippets"
 
 import './catalog.scss'
@@ -9,13 +9,15 @@ import './catalog.scss'
 type CatalogProps = {
     title: string,
     categoryId?: number,
+    setCurrentPage: (page: PageName) => void;
+    setCurrentSnippet: (snippet: SnippetInfo) => void;
 }
 
-function Catalog({ title, categoryId }: CatalogProps) {
+function Catalog({ title, categoryId, setCurrentPage, setCurrentSnippet }: CatalogProps) {
     const snippets = getSnippets().snippets;
     let filteredSnippets = snippets;
     if (categoryId) {
-        filteredSnippets = snippets.filter(snippet => snippet.categoryId.includes(categoryId));
+        filteredSnippets = snippets.filter(snippet => snippet.categoryIds.includes(categoryId));
     } else {
         filteredSnippets = snippets.filter(snippet => snippet.name.toLowerCase().includes(title.toLowerCase()));
     }
@@ -35,7 +37,7 @@ function Catalog({ title, categoryId }: CatalogProps) {
                     <div className="catalog__filters"></div>
                     <div className="snippets">
                         {filteredSnippets.map((element: SnippetInfo) => (
-                            <Snippet key={element.id} snippet={element} />
+                            <Snippet setCurrentSnippet={setCurrentSnippet} setCurrentPage={setCurrentPage} key={element.id} snippet={element} />
                         ))}
                     </div>
                 </>

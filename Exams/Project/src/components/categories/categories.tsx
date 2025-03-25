@@ -1,12 +1,12 @@
 import { getCategory } from "./getCategory"
-import type { DataCategoryImages } from "../../types/types"
+import type { DataCategoryImages, PageName } from "../../types/types"
 import Category from "./category/category";
 
 import './categories.scss'
 
 type CategoriesProps = {
     searchTerm?: string,
-    setCurrentPage?: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
+    setCurrentPage?: (page: PageName) => void;
     setCatalogTitle?: (title: string) => void;
     setIsOpen?: (isOpen: boolean) => void;
     setCurrenCatalogId?: (id: number) => void;

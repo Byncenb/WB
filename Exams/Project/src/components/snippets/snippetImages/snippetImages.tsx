@@ -8,9 +8,10 @@ type SnippetImagesProps = {
     name: string,
     bg?: string,
     groupType?: number,
+    wrapClassName?: string
 }
 
-function SnippetImages({ image, type, name, bg }: SnippetImagesProps) {
+function SnippetImages({ image, type, name, bg, wrapClassName='snippets' }: SnippetImagesProps) {
     const imageType = type ? allImagesTypes[type as keyof typeof allImagesTypes] : undefined;
     const styles = {
         backgroundColor: colors[bg as keyof typeof colors] || colors.lightGray,
@@ -18,8 +19,8 @@ function SnippetImages({ image, type, name, bg }: SnippetImagesProps) {
 
     if (!imageType) {
         return (
-            <div className="snippets__snippet-img-wrap" style={styles}>
-                <img src={image} alt={name} className="snippets__snippet-img" />
+            <div className={`${wrapClassName}__snippet-img-wrap`} style={styles}>
+                <img src={image} alt={name} className={`${wrapClassName}__snippet-img`} />
             </div>
         )
     }
@@ -32,11 +33,11 @@ function SnippetImages({ image, type, name, bg }: SnippetImagesProps) {
                     width: index === 1 && type === 'double-75/25' ? '25%' : '100%',
                 };
                 return (
-                    <div key={index} className="snippets__snippet-img-wrap" style={divStyles}>
+                    <div key={index} className={`${wrapClassName}__snippet-img-wrap`} style={divStyles}>
                         <img
                             src={image}
                             alt={name}
-                            className="snippets__snippet-img"
+                            className={`${wrapClassName}__snippet-img`}
                             style={imageType.styles[index]}
                         />
                     </div>

@@ -1,4 +1,4 @@
-import type { CategoryImage } from "../../../types/types"
+import type { CategoryImage, PageName } from "../../../types/types"
 import { highlightMatch } from "../../search/searchSuggestions/highlightMatch";
 
 import './category.scss'
@@ -6,7 +6,7 @@ import './category.scss'
 type CategoryProps = {
     category: CategoryImage;
     searchTerm?: string;
-    setCurrentPage?: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
+    setCurrentPage?: (page: PageName) => void;
     setCatalogTitle?: (title: string) => void;
     setIsOpen?: (isOpen: boolean) => void;
     setCurrenCatalogId?: (id: number) => void;
@@ -14,10 +14,10 @@ type CategoryProps = {
 
 function Category({ category, searchTerm, setCurrentPage, setCatalogTitle, setIsOpen, setCurrenCatalogId }: CategoryProps) {
     const handleSuggestionClick = (suggestionName: string, categoryId: number) => {
-        setCatalogTitle && setCatalogTitle(suggestionName); // Устанавливаем название каталога
-        setCurrenCatalogId && setCurrenCatalogId(categoryId); // Устанавливаем id категории для каталожной выдачи
-        setCurrentPage && setCurrentPage('catalog'); // Переход на страницу Catalog
-        setIsOpen && setIsOpen(false); // Закрываем подсказки при потере фокуса
+        setCatalogTitle?.(suggestionName); // Устанавливаем название каталога
+        setCurrenCatalogId?.(categoryId); // Устанавливаем id категории для каталожной выдачи
+        setCurrentPage?.('catalog'); // Переход на страницу Catalog
+        setIsOpen?.(false); // Закрываем подсказки при потере фокуса
     };
 
     return (

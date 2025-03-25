@@ -11,7 +11,14 @@
             "folowers": 8492,
             "type": "double-x1.5/x1",
             "bg": "gray",
-            "categoryId": [1, 2]
+            "categoryIds": [1, 2],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 2,
@@ -24,7 +31,14 @@
             "folowers": 8492,
             "type": "single",
             "bg": "blue",
-            "categoryId": [2, 3]
+            "categoryIds": [2, 3],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 3,
@@ -37,7 +51,14 @@
             "folowers": 8492,
             "type": "double-x1.5/x1",
             "bg": "orange",
-            "categoryId": [3, 4]
+            "categoryIds": [3, 4],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 4,
@@ -49,7 +70,14 @@
             "rating": "4.8",
             "folowers": 8492,
             "bg": "orange",
-            "categoryId": [4, 5]
+            "categoryIds": [4, 5],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 5,
@@ -62,7 +90,14 @@
             "folowers": 7113,
             "type": "quadro-x2/x1.5/top/center",
             "bg": "gray",
-            "categoryId": [5, 6]
+            "categoryIds": [5, 6],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 6,
@@ -74,7 +109,14 @@
             "rating": "3.1",
             "folowers": 5587,
             "bg": "blue",
-            "categoryId": [6, 7]
+            "categoryIds": [6, 7],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 7,
@@ -87,7 +129,14 @@
             "folowers": 3828,
             "type": "double-x1.5/x1",
             "bg": "gray",
-            "categoryId": [7, 8]
+            "categoryIds": [7, 8],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 8,
@@ -98,7 +147,14 @@
             "rating": "4.2",
             "folowers": 2951,
             "bg": "blue",
-            "categoryId": [8, 9]
+            "categoryIds": [8, 9],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 9,
@@ -108,7 +164,14 @@
             "price": 49999,
             "rating": "4.0",
             "folowers": 2444,
-            "categoryId": [9, 10]
+            "categoryIds": [9, 10],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 10,
@@ -120,7 +183,14 @@
             "rating": "5.0",
             "folowers": 2193,
             "bg": "blue",
-            "categoryId": [10, 11]
+            "categoryIds": [10, 11],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 11,
@@ -131,7 +201,14 @@
             "oldPrice": 18998,
             "rating": "5.0",
             "folowers": 2224,
-            "categoryId": [11, 12]
+            "categoryIds": [11, 12],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 12,
@@ -142,7 +219,14 @@
             "rating": "4.5",
             "folowers": 2035,
             "bg": "orange",
-            "categoryId": [12, 13]
+            "categoryIds": [12, 13],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 13,
@@ -154,7 +238,14 @@
             "rating": "3.1",
             "folowers": 1835,
             "bg": "blue",
-            "categoryId": [13, 1]
+            "categoryIds": [13, 1],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 14,
@@ -167,7 +258,14 @@
             "folowers": 8492,
             "type": "double-75/25",
             "bg": "red",
-            "categoryId": [1, 2]
+            "categoryIds": [1, 2],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 15,
@@ -180,7 +278,14 @@
             "folowers": 8492,
             "type": "single",
             "bg": "blue",
-            "categoryId": [2, 3]
+            "categoryIds": [2, 3],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 16,
@@ -193,7 +298,14 @@
             "folowers": 8492,
             "type": "double-x1.5/x1",
             "bg": "orange",
-            "categoryId": [3, 4]
+            "categoryIds": [3, 4],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 17,
@@ -205,7 +317,14 @@
             "rating": "4.8",
             "folowers": 8492,
             "bg": "red",
-            "categoryId": [4, 5]
+            "categoryIds": [4, 5],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 18,
@@ -218,7 +337,14 @@
             "folowers": 8492,
             "type": "double-75/25",
             "bg": "red",
-            "categoryId": [5, 6]
+            "categoryIds": [5, 6],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 19,
@@ -231,7 +357,14 @@
             "folowers": 8492,
             "type": "single-topx2",
             "bg": "orange",
-            "categoryId": [6, 7]
+            "categoryIds": [6, 7],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 20,
@@ -244,7 +377,14 @@
             "folowers": 8492,
             "type": "quadro-leftx2/x2/-45deg/45deg",
             "bg": "gray",
-            "categoryId": [7, 8]
+            "categoryIds": [7, 8],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 21,
@@ -257,7 +397,14 @@
             "folowers": 8492,
             "type": "double-x1/x1.5",
             "bg": "blue",
-            "categoryId": [8, 9]
+            "categoryIds": [8, 9],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 23,
@@ -269,7 +416,14 @@
             "rating": "4.8",
             "folowers": 8492,
             "bg": "red",
-            "categoryId": [9, 10]
+            "categoryIds": [9, 10],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         },
         {
             "id": 22,
@@ -282,7 +436,14 @@
             "folowers": 8492,
             "type": "double-x1.5/x1",
             "bg": "gray",
-            "categoryId": [10, 11]
+            "categoryIds": [10, 11],
+            "colors": ["blue", "yellow", "green"],
+            "brand": "Магаз",
+            "composition": "Хлопок",
+            "size": "100×100×100мм",
+            "details": "С любовью",
+            "temperature": "36,6",
+            "productionCountry": "Россия - матушка"
         }
     ]
 }

@@ -1,4 +1,5 @@
-import { SnippetInfo } from "../../../types/types"
+import { PageName, SnippetInfo } from "../../../types/types"
+import Rating from "../../rating/Rating";
 import SnippetImages from "../snippetImages/snippetImages"
 
 import './snippet.scss'
@@ -6,74 +7,73 @@ import './snippet.scss'
 type SnippetProps = {
     snippet: SnippetInfo,
     groupType?: number,
+    setCurrentPage?: (page: PageName) => void;
+    setCurrentSnippet: (snippet: SnippetInfo) => void;
+    wrapClassName?: string;
 }
 
-function Snippet({snippet, groupType}: SnippetProps) {
+function Snippet({snippet, groupType, setCurrentPage, setCurrentSnippet, wrapClassName='snippets'}: SnippetProps) {
+    const handleSnippetClick = (snippet: SnippetInfo) => {
+        setCurrentPage?.('product');
+        setCurrentSnippet(snippet);
+    }
+
     if (groupType === 1) {
         return (
-            <div className="snippets__snippet">
-                <div className="snippets__snippet-imgs-wrap">
-                    <SnippetImages image={snippet.src} name={snippet.name} type={snippet?.type} bg={snippet?.bg} />
+            <div className={`${wrapClassName}__snippet`} onClick={() => handleSnippetClick(snippet)}>
+                <div className={`${wrapClassName}__snippet-imgs-wrap`}>
+                    <SnippetImages image={snippet.src} name={snippet.name} type={snippet?.type} bg={snippet?.bg} wrapClassName={wrapClassName}/>
                 </div>
-                <div className="snippets__snippet-bottom-info">
-                    <div className="snippets__snippet-info">
-                        <div className="snippets__snippet-title">
-                            <h2 className="snippets__snippet-name">{snippet.name}</h2>
-                            <img src="/snippet/icon/heart.svg" alt="" className="snippets__add-fav" />
+                <div className={`${wrapClassName}__snippet-bottom-info`}>
+                    <div className={`${wrapClassName}__snippet-info`}>
+                        <div className={`${wrapClassName}__snippet-title`}>
+                            <h2 className={`${wrapClassName}__snippet-name`}>{snippet.name}</h2>
+                            <img src="/snippet/icon/heart.svg" alt="" className={`${wrapClassName}__add-fav`} />
                         </div>
-                        <p className="snippets__snippet-description">{snippet.description}</p>
+                        <p className={`${wrapClassName}__snippet-description`}>{snippet.description}</p>
                     </div>
-                    <div className="snippets__buy-wrap">
-                        <div className="snippets__buy-wrap-info">
-                            <div className="snippets__snippet-prices">
-                                <h4 className="snippets__snippet-price">{snippet.price} ₽</h4>
+                    <div className={`${wrapClassName}__buy-wrap`}>
+                        <div className={`${wrapClassName}__buy-wrap-info`}>
+                            <div className={`${wrapClassName}__snippet-prices`}>
+                                <h4 className={`${wrapClassName}__snippet-price`}>{snippet.price} ₽</h4>
                                 { snippet.oldPrice && (
-                                    <s className="snippets__snippet-old-price">{snippet.oldPrice} ₽</s>
+                                    <s className={`${wrapClassName}__snippet-old-price`}>{snippet.oldPrice} ₽</s>
                                 )}
                             </div>
-                            <div className="snippets__user-rating">
-                                <div className="snippets__snippet-rating">
-                                    <p className="snippets__snippet-rating-value">{snippet.rating}</p>
-                                    <img src="/snippet/icon/black-star.svg" alt="" className="snippets__snippet-rating-star" />
-                                </div>
-                                <div className="snippets__snippet-folowers">
-                                    <p className="snippets__snippet-folowers-value">{snippet.folowers}</p>
-                                    <img src="/snippet/icon/black-heart.svg" alt="" className="snippets__snippet-folowers-heart" />
-                                </div>
-                            </div>
+                            <Rating rating={snippet.rating} folowers={snippet.folowers}  />
                         </div>
-                        <a className="snippets__buy-btn">В корзину</a>
+                        <a className={`${wrapClassName}__buy-btn`}>В корзину</a>
                     </div>
                 </div>
             </div>
         )
     } else {
         return (
-            <div className="snippets__small-snippet">
-                <SnippetImages image={snippet.src} name={snippet.name} bg={snippet?.bg} groupType={groupType}/>
-                <img src="/snippet/icon/lighter-heart.svg" alt="" className="snippets__add-fav" />
-                <div className="snippets__snippet-bottom-info">
-                    <div className="snippets__buy-wrap">
-                        <div className="snippets__buy-wrap-info">
-                            <div className="snippets__snippet-prices">
-                                <h4 className="snippets__snippet-price">{snippet.price} ₽</h4>
+            <div className={`${wrapClassName}__small-snippet`} onClick={() => handleSnippetClick(snippet)}>
+                <SnippetImages image={snippet.src} name={snippet.name} bg={snippet?.bg} groupType={groupType} wrapClassName={wrapClassName}/>
+                <img src="/snippet/icon/lighter-heart.svg" alt="" className={`${wrapClassName}__add-fav`} />
+                <div className={`${wrapClassName}__snippet-bottom-info`}>
+                    <div className={`${wrapClassName}__buy-wrap`}>
+                        <div className={`${wrapClassName}__buy-wrap-info`}>
+                            <div className={`${wrapClassName}__snippet-prices`}>
+                                <h4 className={`${wrapClassName}__snippet-price`}>{snippet.price} ₽</h4>
                                 { snippet.oldPrice && (
-                                    <s className="snippets__snippet-old-price">{snippet.oldPrice} ₽</s>
+                                    <s className={`${wrapClassName}__snippet-old-price`}>{snippet.oldPrice} ₽</s>
                                 )}
                             </div>
-                            <div className="snippets__user-rating">
-                                <div className="snippets__snippet-rating">
-                                    <p className="snippets__snippet-rating-value">{snippet.rating}</p>
-                                    <img src="/snippet/icon/white-star.svg" alt="" className="snippets__snippet-rating-star" />
+                            <div className={`${wrapClassName}__user-rating`}>
+                                <div className={`${wrapClassName}__snippet-rating`}>
+                                    <p className={`${wrapClassName}__snippet-rating-value`}>{snippet.rating}</p>
+                                    <img src="/snippet/icon/white-star.svg" alt="" className={`${wrapClassName}__snippet-rating-star`} />
                                 </div>
-                                <div className="snippets__snippet-folowers">
-                                    <p className="snippets__snippet-folowers-value">{snippet.folowers}</p>
-                                    <img src="/snippet/icon/white-heart.svg" alt="" className="snippets__snippet-folowers-heart" />
+                                <div className={`${wrapClassName}__snippet-folowers`}>
+                                    <p className={`${wrapClassName}__snippet-folowers-value`}>{snippet.folowers}</p>
+                                    <img src="/snippet/icon/white-heart.svg" alt="" className={`${wrapClassName}__snippet-folowers-heart`} />
                                 </div>
                             </div>
                         </div>
-                        <p className="snippets__snippet-description">{snippet.name}</p>
-                        <a className="snippets__buy-btn">В корзину</a>
+                        <p className={`${wrapClassName}__snippet-description`}>{snippet.name}</p>
+                        <a className={`${wrapClassName}__buy-btn`}>В корзину</a>
                     </div>
                 </div>
             </div>

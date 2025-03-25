@@ -1,4 +1,4 @@
-import { SnippetInfo } from "../../types/types";
+import { PageName, SnippetInfo } from "../../types/types";
 import { getSnippets } from "./snippet/getSnippets"
 import { allSnippetsGroups } from "./snippetsGroup/allSnippetsGroups";
 
@@ -6,7 +6,12 @@ import SnippetsGroup from "./snippetsGroup/snippetsGroup";
 
 import './snippets.scss'
 
-function Snippets() {
+type SnippetsProps = {
+    setCurrentPage: (page: PageName) => void;
+    setCurrentSnippet: (snippet: SnippetInfo) => void;
+}
+
+function Snippets({setCurrentPage, setCurrentSnippet}: SnippetsProps) {
     const data = getSnippets();
     
     return (
@@ -22,6 +27,8 @@ function Snippets() {
                         snippets={snippetsForGroup} 
                         title={snippetsGroup.titleSrc}
                         groupType={snippetsGroup.groupType}
+                        setCurrentPage={setCurrentPage}
+                        setCurrentSnippet={setCurrentSnippet}
                     />
                 );
             })}

@@ -13,7 +13,14 @@ export const getSnippets = (): DataSnippetsInfo => {
         folowers: item.folowers,
         type: item?.type,
         bg: item?.bg || undefined,
-        categoryId: item.categoryId,
+        categoryIds: item.categoryIds,
+        colors: item.colors,
+        brand: item.brand,
+        composition: item.composition,
+        size: item.size,
+        details: item.details,
+        temperature: item.temperature,
+        productionCountry: item.productionCountry,
     }));
     return { snippets: items };
 }   

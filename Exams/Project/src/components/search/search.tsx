@@ -6,9 +6,10 @@ import './search.scss'
 import { getFilteredSuggestions } from './searchSuggestions/getFilteredSuggestions';
 import Categories from '../categories/categories';
 import { highlightMatch } from './searchSuggestions/highlightMatch';
+import { PageName } from '../../types/types';
 
 type SearchProps = {
-    setCurrentPage: (page: 'home' | 'catalog' | 'profile' | 'delivery') => void;
+    setCurrentPage: (page: PageName) => void;
     setCatalogTitle: (title: string) => void;
     setCurrenCatalogId: (id: number) => void;
 }

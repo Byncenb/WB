@@ -19,7 +19,14 @@ export type SnippetInfo = {
     folowers: number;
     type?: string;
     bg?: string;
-    categoryId: number[];
+    categoryIds: number[];
+    colors: string[];
+    brand?: string;
+    composition?: string;
+    size?: string;
+    details?: string;
+    temperature?: string;
+    productionCountry?: string;
 }
 
 export type DataSnippetsInfo = {
@@ -46,3 +53,5 @@ type OrderProduct = {
 export type DataOrdersInfo = {
     orders: OrderInfo[];
 }
+
+export type PageName = 'home' | 'catalog' | 'profile' | 'delivery' | 'product';
