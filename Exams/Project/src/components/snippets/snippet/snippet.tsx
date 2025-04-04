@@ -1,5 +1,6 @@
 import { useCart } from "../../../hooks/useCart";
 import { PageName, SnippetInfo } from "../../../types/types"
+import FavoriteIcon from "../../favoriteIcon/favoriteIcon";
 import Rating from "../../rating/Rating";
 import SnippetImages from "../snippetImages/snippetImages"
 
@@ -36,8 +37,7 @@ function Snippet({snippet, groupType, setCurrentPage, setCurrentSnippet, wrapCla
                     <div className={`${wrapClassName}__snippet-info`}>
                         <div className={`${wrapClassName}__snippet-title`}>
                             <h2 className={`${wrapClassName}__snippet-name`}>{snippet.name}</h2>
-                            <img src="/snippet/icon/heart.svg" alt="" className={`${wrapClassName}__add-fav`} />
-                        </div>
+                            <FavoriteIcon wrapClassName={wrapClassName} typeIndex={1}/>                        </div>
                         <p className={`${wrapClassName}__snippet-description`}>{snippet.description}</p>
                     </div>
                     <div className={`${wrapClassName}__buy-wrap`}>
@@ -59,7 +59,7 @@ function Snippet({snippet, groupType, setCurrentPage, setCurrentSnippet, wrapCla
         return (
             <div className={`${wrapClassName}__small-snippet`} onClick={() => handleSnippetClick(snippet)}>
                 <SnippetImages image={snippet.src} name={snippet.name} bg={snippet?.bg} groupType={groupType} wrapClassName={wrapClassName}/>
-                <img src="/snippet/icon/lighter-heart.svg" alt="" className={`${wrapClassName}__add-fav`} />
+                <FavoriteIcon wrapClassName={wrapClassName} typeIndex={0}/>
                 <div className={`${wrapClassName}__snippet-bottom-info`}>
                     <div className={`${wrapClassName}__buy-wrap`}>
                         <div className={`${wrapClassName}__buy-wrap-info`}>

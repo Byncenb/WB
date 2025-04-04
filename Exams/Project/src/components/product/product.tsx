@@ -9,6 +9,7 @@ import SimilarProducts from "../similarProducts/similarProducts";
 
 import { useEffect, useState } from "react";
 import { useCart } from "../../hooks/useCart";
+import FavoriteIcon from "../favoriteIcon/favoriteIcon";
 
 type ProductProps = {
     product: SnippetInfo;
@@ -62,7 +63,7 @@ function Product({product, setCurrentSnippet}: ProductProps) {
                         </div>
                         <div className="product__buttons">
                             <a className="product__buy-btn" onClick={handleAddToCart}>В корзину</a>
-                            <img src="/product/emptyHeart.svg" alt="" className="product__add-fav" />
+                            <FavoriteIcon wrapClassName='product' typeIndex={2}/>
                         </div>
                         <ProductTable product={product}/>
                         <p className="product__show-more" onClick={() => setOptionsHide(false)}>Подробнее</p>

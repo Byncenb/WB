@@ -67,7 +67,7 @@ function Search({ setCurrentPage, setCatalogTitle, setCurrenCatalogId }: SearchP
                         <ul className="header__search-suggestions-list">
                             {filteredSuggestions.length > 0 ? (
                                 filteredSuggestions.map((suggestion, index) => (
-                                    <li className="header__search-suggestions-item" onClick={() =>handleSuggestionClick(suggestion)} key={index}>
+                                    <li className="header__search-suggestions-item" onClick={() => handleSuggestionClick(suggestion)} key={index}>
                                         <p className="header__search-suggestions-item-text">{highlightMatch(suggestion, searchTerm)}</p>
                                         <img src="/header/icons/suggestions/cross.svg" alt="" className="header__search-suggestions-cross" />
                                     </li>

@@ -1,3 +1,5 @@
+import { COLORS_NAME } from "../constants/constants";
+
 export type CategoryImage = {
     name: string;
     src: string;
@@ -27,7 +29,7 @@ export type SnippetInfo = {
     details?: string;
     temperature?: string;
     productionCountry?: string;
-    quantity?: number;
+    quantity: number;
 }
 
 export type DataSnippetsInfo = {
@@ -55,4 +57,6 @@ export type DataOrdersInfo = {
     orders: OrderInfo[];
 }
 
-export type PageName = 'home' | 'catalog' | 'profile' | 'delivery' | 'product';
+export type PageName = 'home' | 'catalog' | 'profile' | 'delivery' | 'product' | 'cart' | 'succesfulOrder';
+
+export type ColorKey = keyof typeof COLORS_NAME;

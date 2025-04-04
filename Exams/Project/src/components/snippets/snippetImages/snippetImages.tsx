@@ -3,12 +3,12 @@ import { allImagesTypes } from "./allImagesTypes"
 import { colors } from "../snippet/colorsForBg";
 
 type SnippetImagesProps = {
-    image: string,
-    type?: string,
-    name: string,
-    bg?: string,
-    groupType?: number,
-    wrapClassName?: string
+    image: string;
+    type?: string;
+    name: string;
+    bg?: string;
+    groupType?: number;
+    wrapClassName?: string;
 }
 
 function SnippetImages({ image, type, name, bg, wrapClassName='snippets' }: SnippetImagesProps) {

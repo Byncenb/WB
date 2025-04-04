@@ -23,7 +23,7 @@ function Header({ setCurrentPage, setCatalogTitle, setCurrenCatalogId }: HeaderP
       setCatalogTitle={setCatalogTitle}
       setCurrenCatalogId={setCurrenCatalogId}/>
       <div className="header__icons">
-        <img src={cartIcon} alt="Корзина" className="header__icon-cart" />
+        <img src={cartIcon} alt="Корзина" className="header__icon-cart" onClick={() => setCurrentPage('cart')}/>
         <img src={deliveryIcon} alt="Доставка" className="header__icon-delivery" onClick={() => setCurrentPage('delivery')}/>
         <img src={favoritesIcon} alt="Избранное" className="header__icon-favorites" />
         <img src={profileIcon} alt="Профиль" className="header__icon-profile" onClick={() => setCurrentPage('profile')}/>

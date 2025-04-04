@@ -1,18 +1,11 @@
 import { useState } from "react";
+import { COLORS_NAME } from "../../constants/constants";
+import { ColorKey } from "../../types/types";
 
 type ProductColorProps = {
     colors: string[];
     img: string;
 }
-
-type ColorKey = keyof typeof COLORS_NAME;
-
-const COLORS_NAME = {
-    base: 'Базовый',
-    blue: 'Синий',
-    yellow: 'Желтый',
-    green: 'Зеленый',
-} as const;
 
 function ProductColor({colors, img}: ProductColorProps) {
     

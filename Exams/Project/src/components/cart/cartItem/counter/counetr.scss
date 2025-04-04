@@ -1,0 +1,13 @@
+.cart__counter {
+    display: flex;
+    justify-content: space-between;
+    background: var(--Shop-Almost-white);
+    padding: 13px 18px;
+    border-radius: var(--border8);
+    align-items: center;
+    width: 104px;
+
+    &-del, &-value, &-add {
+        font-size: 19px;
+    }
+}

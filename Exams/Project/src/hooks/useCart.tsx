@@ -19,7 +19,7 @@ export const useCart = () => {
             setCartItems((prevCart: SnippetInfo[]) =>
                 prevCart.map((item: SnippetInfo) =>
                     item.id === product.id
-                        ? { ...item, quantity: (item?.quantity || 0) + 1 }
+                        ? { ...item, quantity: (item.quantity || 0) + 1 }
                         : item
                 )
             );
@@ -28,8 +28,20 @@ export const useCart = () => {
         }
     };
 
-    // Функция для удаления товара из корзины
-    const removeFromCart = (productId: number) => {
+    // Функция для удаления одной единицы товара из корзины
+    const removeOneFromCart = (productId: number) => {
+        setCartItems((prevCart: SnippetInfo[]) =>
+            prevCart
+                .map((item) =>
+                    item.id === productId && item.quantity && item.quantity > 0
+                        ? { ...item, quantity: item.quantity - 1 }
+                        : item
+                )
+                .filter((item) => !(item.id === productId && item.quantity === 0)))
+    };
+
+    // Удаление товара из корзины с использованием промисов
+    const removeFromCart = async (productId: number): Promise<void> => {
         setCartItems((prevCart: SnippetInfo[]) =>
             prevCart.filter((item) => item.id !== productId)
         );
@@ -39,5 +51,6 @@ export const useCart = () => {
         cartItems,
         addToCart,
         removeFromCart,
+        removeOneFromCart,
     };
 };

@@ -1,4 +1,4 @@
-.snippets, .similar-products {
+.snippets, .similar-products, .cart, .succesful-order {
     &__snippet-imgs-wrap {
         margin-bottom: 4px;
         display: flex;
@@ -171,5 +171,12 @@
         &__snippet-folowers-heart {
             filter: brightness(0);
         }
+    }
+}
+
+.succesful-order {
+    &__snippet-img-wrap {
+        width: 101px;
+        height: 130px;
     }
 }
